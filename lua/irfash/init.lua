@@ -1,6 +1,4 @@
-require("irfash.util")
-
-
-
+  require("irfash.util")
+--require("irfash.options")
 --require("irfash.lazy")
-require("irfash.config")
+  require("irfash.config")

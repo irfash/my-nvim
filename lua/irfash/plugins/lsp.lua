@@ -36,16 +36,22 @@ return {
       "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/cmp-nvim-lua",
       "lukas-reineke/cmp-under-comparator",
-      {
-        "zbirenbaum/copilot-cmp",
-        config = function() require("copilot_cmp").setup() end,
-      },
+      -- {
+      --   "zbirenbaum/copilot-cmp",
+      --   config = function() require("copilot_cmp").setup() end,
+      -- },
       "onsails/lspkind.nvim",
-
+      -- {
+      --  'dsznajder/vscode-es7-javascript-react-snippets',
+      --   event = 'InsertEnter', -- Replace with the event you prefer
+      --   run = 'yarn install --frozen-lockfile && yarn compile', -- Commands to run when loading the plugin
+      --  },
       -- Snippets
-      "L3MON4D3/LuaSnip",
-      "rafamadriz/friendly-snippets",
 
+{
+  "L3MON4D3/LuaSnip",
+  dependencies = { "rafamadriz/friendly-snippets" },
+},
       -- Misc
       {
         "ivanjermakov/troublesum.nvim",
@@ -340,7 +346,8 @@ return {
       vim.diagnostic.config({
         severity_sort = true,
         signs = true,
-        underline = false,
+        underline = true,
+        -- underline = false,
         update_in_insert = true,
         virtual_text = false,
         -- virtual_text = {
@@ -398,7 +405,7 @@ return {
         },
         sources = {
           { name = "luasnip", priority = 100, max_item_count = 8 },
-          { name = "copilot", priority = 90, max_item_count = 8 },
+          -- { name = "copilot", priority = 90, max_item_count = 8 },
           { name = "nvim_lsp", priority = 90, keyword_length = 3, max_item_count = 8 },
           { name = "path", priority = 20 },
           { name = "buffer", priority = 10, keyword_length = 3, max_item_count = 8 },

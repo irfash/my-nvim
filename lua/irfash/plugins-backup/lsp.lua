@@ -6,21 +6,21 @@ local lsp_icons = require('irfash.icons.lsp')
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    'tsserver',
-    'eslint',
-})
+--lsp.ensure_installed({
+  --  'tsserver',
+  --  'eslint',
+--})
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
+--lsp.configure('lua-language-server', {
+--    settings = {
+--        Lua = {
+--            diagnostics = {
+--                globals = { 'vim' }
+--            }
+--        }
+--    }
+--})
 
 
 
@@ -36,9 +36,9 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
-})
+--lsp.setup_nvim_cmp({
+--    mapping = cmp_mappings
+--})
 
 lsp.set_preferences({
     suggest_lsp_servers = false,

@@ -1,3 +1,12 @@
+
+  -- "nvim-tree/nvim-web-devicons",
+  -- "folke/edgy.nvim",
+  -- "lukas-reineke/virt-column.nvim", -- Use characters in the color column
+    -- "tzachar/local-highlight.nvim", -- Highlight word under cursor throughout the visible buffer
+    -- "stevearc/dressing.nvim", -- Utilises Neovim UI hooks to manage inputs, selects etc
+    -- "lewis6991/gitsigns.nvim", -- Git signs in the statuscolumn
+    -- "NvChad/nvim-colorizer.lua", -- Highlight hex and rgb colors within Neovim
+    -- "lukas-reineke/indent-blankline.nvim", -- Show indentation lines
 return {
   "nvim-tree/nvim-web-devicons",
 
@@ -126,7 +135,7 @@ return {
       buftype_exclude = { "terminal", "nofile" },
     },
   },
--- 
+--
   -- {
   --   "goolord/alpha-nvim", -- Dashboard for Neovim
   --   priority = 5, -- Load after persisted.nvim

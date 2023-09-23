@@ -12,20 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 --require("lazy").setup({spec =  {import = "irfash.lazy.plugins"},
+require("lazy").setup({spec =  {import = "irfash.lazy.plugins"},})
 
-require("lazy").setup({spec =  {import = "irfash.plugins"},
-})
 
 
 
 -- Load functions next as our plugins and autocmds require them
-require("irfash.config.functions")
+-- require("irfash.config.functions")
 
 -- Autocmds and keymaps can be loaded, lazily, after plugins
-vim.api.nvim_create_autocmd("User", {
-  pattern = "VeryLazy",
-  callback = function()
-    require("irfash.config.commands")
-    require("irfash.config.keymaps")
-  end,
-})
+-- vim.api.nvim_create_autocmd("User", {
+--   pattern = "VeryLazy",
+--   callback = function()
+--     require("irfash.config.commands")
+--     require("irfash.config.keymaps")
+--   end,
+-- })

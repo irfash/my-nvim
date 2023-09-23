@@ -9,8 +9,8 @@ function om.has(feature) return vim.fn.has(feature) > 0 end
 om.nightly = om.has("nvim-0.10")
 
 ---Display the given error
-om.dd = function(...) require("irfash.util.debug").dump(...) end
-vim.print = om.dd
+-- om.dd = function(...) require("irfash.util.debug").dump(...) end
+-- vim.print = om.dd
 
 local terminals = {}
 

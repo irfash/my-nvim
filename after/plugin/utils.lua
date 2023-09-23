@@ -13,7 +13,7 @@ function ColorMyPencils(color)
 color = color or "gruvbox"
 
 
---vim.cmd.colorscheme(color)
+vim.cmd.colorscheme(color)
 --require(color).setup({
 --disable_background = true
 --})

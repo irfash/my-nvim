@@ -31,7 +31,7 @@ return {
           telescope_results = "require('onedarkpro.helpers').darken('bg', 4, 'onedark')",
           telescope_preview = "require('onedarkpro.helpers').darken('bg', 6, 'onedark')",
           telescope_selection = "require('onedarkpro.helpers').darken('bg', 8, 'onedark')",
-          copilot = "require('onedarkpro.helpers').darken('gray', 8, 'onedark')",
+          -- copilot = "require('onedarkpro.helpers').darken('gray', 8, 'onedark')",
           breadcrumbs = "require('onedarkpro.helpers').darken('gray', 10, 'onedark')",
           local_highlight = "require('onedarkpro.helpers').lighten('bg', 4, 'onedark')",
           light_gray = "require('onedarkpro.helpers').darken('gray', 7, 'onedark')",
@@ -48,7 +48,7 @@ return {
           telescope_results = "require('onedarkpro.helpers').darken('bg', 5, 'onelight')",
           telescope_preview = "require('onedarkpro.helpers').darken('bg', 7, 'onelight')",
           telescope_selection = "require('onedarkpro.helpers').darken('bg', 9, 'onelight')",
-          copilot = "require('onedarkpro.helpers').lighten('gray', 8, 'onelight')",
+          -- copilot = "require('onedarkpro.helpers').lighten('gray', 8, 'onelight')",
           breadcrumbs = "require('onedarkpro.helpers').lighten('gray', 8, 'onelight')",
           local_highlight = "require('onedarkpro.helpers').darken('bg', 5, 'onelight')",
           light_gray = "require('onedarkpro.helpers').lighten('gray', 10, 'onelight')",
@@ -117,7 +117,7 @@ return {
         CmpItemAbbrMatchFuzzy = { fg = "${blue}", underline = true },
 
         -- Copilot
-        CopilotSuggestion = { fg = "${copilot}", italic = true },
+        -- CopilotSuggestion = { fg = "${copilot}", italic = true },
 
         -- DAP
         DebugBreakpoint = { fg = "${red}", bold = true },
@@ -138,7 +138,11 @@ return {
         FidgetTitle = { fg = "${purple}", italic = true },
 
         -- Heirline
-        Heirline = { bg = "${statusline_bg}" },
+
+        -- Heirline = { bg = "${statusline_bg}" },
+        -- HeirlineStatusColumn = { fg = "${statuscolumn_border}" },
+        -- HeirlineBufferline = { fg = { dark = "#939aa3", light = "#6a6a6a" } },
+        Heirline = { bg ="NONE" },--"${statusline_bg}" },
         HeirlineStatusColumn = { fg = "${statuscolumn_border}" },
         HeirlineBufferline = { fg = { dark = "#939aa3", light = "#6a6a6a" } },
 

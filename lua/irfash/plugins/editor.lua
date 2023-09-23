@@ -4,7 +4,7 @@
   -- "stevearc/oil.nvim", -- File manager
   -- "stevearc/aerial.nvim", -- Toggled list of classes, methods etc in current file
   -- "folke/todo-comments.nvim", -- Highlight and search for todo comments within the codebase
-  -- "ahmedkhalf/project.nvim", -- Automatically set the cwd to the project root
+   -- "ahmedkhalf/project.nvim", -- Automatically set the cwd to the project root
 return {
   {
     "cameron-wags/rainbow_csv.nvim",

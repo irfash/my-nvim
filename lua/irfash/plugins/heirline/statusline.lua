@@ -3,21 +3,25 @@ local M = {}
 local utils = require("heirline.utils")
 local conditions = require("heirline.conditions")
 
+
+
+
+
 local LeftSlantStart = {
-  provider = "",
-  hl = { fg = "bg", bg = "statusline_bg" },
+  provider = "",
+  hl = { fg = "statusline_bg", bg = "NONE" },
 }
 local LeftSlantEnd = {
   provider = "",
-  hl = { fg = "statusline_bg", bg = "bg" },
+  hl = { fg = "statusline_bg", bg = "NONE" },
 }
 local RightSlantStart = {
   provider = "",
-  hl = { fg = "statusline_bg", bg = "bg" },
+  hl = { fg = "statusline_bg", bg = "NONE" },
 }
 local RightSlantEnd = {
-  provider = "",
-  hl = { fg = "bg", bg = "statusline_bg" },
+  provider = "",
+  hl = { fg = "statusline_bg", bg = "NONE" },
 }
 
 ---Return the current vim mode
@@ -94,7 +98,7 @@ M.VimMode = {
   },
   {
     provider = "",
-    hl = function(self) return { fg = self.mode_color, bg = "bg" } end,
+    hl = function(self) return { fg = self.mode_color, bg = "NONE"} end,
   },
 }
 
@@ -270,7 +274,7 @@ M.LspAttached = {
   static = {
     lsp_attached = false,
     show_lsps = {
-      copilot = false,
+      -- copilot = false,
       efm = false,
     },
   },
@@ -309,7 +313,7 @@ M.Ruler = {
   end,
   {
     provider = "",
-    hl = { fg = "gray", bg = "bg" },
+    hl = { fg = "gray", bg = "NONE" },
   },
   {
     -- %L = number of lines in the buffer
@@ -360,7 +364,7 @@ M.SearchResults = {
   end,
   {
     provider = "",
-    hl = function() return { fg = utils.get_highlight("Substitute").bg, bg = "bg" } end,
+    hl = function() return { fg = utils.get_highlight("Substitute").bg, bg = "NONE" } end,
   },
   {
     provider = function(self)
@@ -371,8 +375,8 @@ M.SearchResults = {
     hl = function() return { bg = utils.get_highlight("Substitute").bg, fg = "bg" } end,
   },
   {
-    provider = "",
-    hl = function() return { bg = utils.get_highlight("Substitute").bg, fg = "bg" } end,
+  provider = "",
+    hl = function() return { bg = "NONE", fg = utils.get_highlight("Substitute").bg } end,
   },
 }
 

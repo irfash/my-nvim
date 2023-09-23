@@ -89,15 +89,15 @@ function om.MoveToBuffer()
   end)
 end
 
--- function om.EditSnippet()
---   local path = Homedir .. "/.config/snippets"
---   local snippets = { "lua", "ruby", "python", "global", "package" }
---
---   vim.ui.select(snippets, { prompt = "Snippet to edit" }, function(choice)
---     if choice == nil then return end
---     vim.cmd(":edit " .. path .. "/" .. choice .. ".json")
---   end)
--- end
+function om.EditSnippet()
+  local path = Homedir .. "/.config/snippets"
+  local snippets = { "lua", "ruby", "python", "global", "package" }
+
+  vim.ui.select(snippets, { prompt = "Snippet to edit" }, function(choice)
+    if choice == nil then return end
+    vim.cmd(":edit " .. path .. "/" .. choice .. ".json")
+  end)
+end
 
 function om.ToggleLineNumbers()
   if vim.wo.relativenumber then

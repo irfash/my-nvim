@@ -1,3 +1,6 @@
+
+  -- "rebelot/heirline.nvim",
+
 local M = {
   "rebelot/heirline.nvim",
   lazy = true,
@@ -84,6 +87,7 @@ function M.config()
           filetype = self.force_inactive_filetypes,
         })
       end,
+
       statusline.VimMode,
       statusline.GitBranch,
       -- statusline.FileNameBlock,
@@ -92,11 +96,11 @@ function M.config()
       align,
       statusline.Overseer,
       statusline.Dap,
-      statusline.Lazy,
+      -- statusline.Lazy,
       statusline.FileType,
       -- statusline.FileEncoding,
       statusline.Session,
-      statusline.MacroRecording,
+      -- statusline.MacroRecording,
       statusline.SearchResults,
       statusline.Ruler,
     },
